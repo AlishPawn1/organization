@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, *{
+            box-sizing: border-box;
+        }
+        .award-section p {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 32px;
+  width: 35%;
+  margin: 30px auto;
+}
+.award-section .award-img {
+  overflow: hidden;
+  height: 804px;
+  background-color: #ddd;
+}
+.award-section .award-img .col-md-4:first-child {
+  margin-top: -518px;
+}
+.award-section .award-img .col-md-4:nth-child(2) {
+  margin-top: -417px;
+}
+.award-section .award-img .col-md-4:nth-child(3) {
+  margin-top: -331px;
+}
+    </style>
+</head>
+<body>
+    <section class="section-padding award-section primary-bg award-point">
+        <div class="text-center pb-4">
+            <h4 class="heading wow animate__animated animate__fadeInUp">Award-Winning Websites</h4>
+            <p class="wow animate__animated animate__fadeInUp animate__delay-1s">I create award-winning websites that elevate your brand and attract more customers.</p>
+        </div>
+        <div class="award-img">
+            <div class="row">
+                <div class="col-md-4 scrollable-column-first">
+                    <div class="scrollable-content">
+                        <div>
+                            <img src="image/award-0.webp" alt="" class="img-cover">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cae08c33c9c0df699_website-fyrre-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/6412899d55d4750b8c07a087_website-fylla-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cd11f015f46bb424a_website-arkitect-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="image/award-4.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 scrollable-column-second">
+                    <div class="scrollable-content">
+                        <div>
+                            <img src="image/award-0.webp" alt="" class="img-cover">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cae08c33c9c0df699_website-fyrre-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/6412899d55d4750b8c07a087_website-fylla-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cd11f015f46bb424a_website-arkitect-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="image/award-4.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 scrollable-column-third">
+                    <div class="scrollable-content">
+                        <div>
+                            <img src="image/award-0.webp" alt="" class="img-cover">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cae08c33c9c0df699_website-fyrre-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/6412899d55d4750b8c07a087_website-fylla-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="https://assets-global.website-files.com/640ad50de56ca34470bbf3c7/64128a1cd11f015f46bb424a_website-arkitect-p-800.webp" alt="">
+                        </div>
+                        <div class="pt-4">
+                            <img class="img-cover" src="image/award-4.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+        function applyScrollAnimation(elements, factor) {
+            $(window).scroll(function () {
+                const scrollY = $(this).scrollTop();
+                const awardPoint = $('.award-point');
+    
+                if (awardPoint.length) {
+                    const awardPointTop = awardPoint.offset().top;
+    
+                    elements.each(function () {
+                        const element = $(this);
+                        const elementTop = element.offset().top;
+    
+                        if (scrollY >= elementTop - awardPointTop) {
+                            const scrollX = (scrollY - elementTop + awardPointTop) * factor;
+                            element.css('transform', `translateY(${scrollX}px)`);
+                        } else {
+                            element.css('transform', 'translateY(0)');
+                        }
+                    });
+                }
+            });
+        }
+    
+        const textElement1 = $('.scrollable-column-first');
+        const textElement2 = $('.scrollable-column-second');
+        const textElement3 = $('.scrollable-column-third');
+    
+        // Add a condition if elements exist before applying the scroll animation
+        if (textElement1.length || textElement2.length || textElement3.length) {
+            console.log("Applying scroll animation...");
+            applyScrollAnimation([textElement1, textElement2, textElement3], 0.1);
+        } else {
+            console.log("No elements found for scroll animation.");
+        }
+    });
+    </script>
+</body>
+</html>

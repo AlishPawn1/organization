@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Target :before/:after with JavaScript</title>
+    <style>
+        .hello::before {
+            content: 'Before Content ';
+            color: green;
+        }
+
+        .hello::after {
+            content: ' After Content';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hello">Hello, I'm the target element!</div>
+
+<script>
+    // Get the element with the class "hello"
+    var targetElement = document.querySelector('.hello');
+
+    // Get the styles applied to the ::before and ::after pseudo-elements
+    var beforeStyles = window.getComputedStyle(targetElement, ':before');
+    var afterStyles = window.getComputedStyle(targetElement, ':after');
+
+    // Modify the content and color of ::before
+    targetElement.style.setProperty('--before-content', 'Modified Before Content');
+    targetElement.style.setProperty('--before-color', 'red');
+
+    // Modify the content and color of ::after
+    targetElement.style.setProperty('--after-content', ' Modified After Content');
+    targetElement.style.setProperty('--after-color', 'orange');
+</script>
+
+</body>
+</html>

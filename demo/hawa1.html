@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .category{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+.category-item:nth-child(10) { grid-area: 5 / 3 / 6 / 4; }
+.category-item:nth-child(11) { grid-area: 5 / 4 / 6 / 5; }
+
+.category-item:nth-child(1) { grid-area: 1 / 1 / 2 / 5; }
+.category-item:nth-child(2) { grid-area: 2 / 1 / 3 / 3; }
+.category-item:nth-child(3) { grid-area: 2 / 3 / 3 / 5; }
+.category-item:nth-child(4) { grid-area: 3 / 1 / 4 / 2; }
+.category-item:nth-child(5) { grid-area: 3 / 2 / 4 / 3; }
+.category-item:nth-child(6) { grid-area: 3 / 3 / 4 / 4; }
+.category-item:nth-child(7) { grid-area: 3 / 4 / 4 / 5; }
+.category-item:nth-child(8) { grid-area: 4 / 1 / 5 / 3; }
+.category-item:nth-child(9) { grid-area: 4 / 3 / 5 / 5; }
+.category-item:nth-child(10) { grid-area: 5 / 1 / 6 / 2; }
+.category-item:nth-child(11) { grid-area: 5 / 2 / 6 / 3; }
+.category-item:nth-child(10) { grid-area: 5 / 3 / 6 / 4; }
+.category-item:nth-child(11) { grid-area: 5 / 4 / 6 / 5; }
+
+
+
+.container{
+    /* width: 100%;
+    margin: 0 20px;
+     */
+}
+    </style>
+
+</head>
+<body>
+    <!-- <?php get_header();?>  
+    <section class="banner-single">
+         <div class="blend-page">
+             <h2><?= single_cat_title(); ?></h2>
+         </div>
+     </section>
+     <section>
+         <div class="banner-bottom">
+             <div class="full-width">
+                 <div class="half-width">
+                     <div class="image-banner">
+                         <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                     </div>
+                 </div>
+                 <div class="half-width">
+                     <div class="content-banner">
+                         <span class="date">
+                             14th october 2023
+                         </span>
+                         <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                         <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                         <div class="button">
+                             <a href="#">(Read more)</a>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <section class="py-5 news-top">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3 col-sm-6">
+                     <h4 class="headding">News</h4>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <section class="py-5 news-middle">
+         <div class="full-width">
+             <div class="half-width">
+                 <div class="image-banner">
+                     <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                 </div>
+             </div>
+             <div class="half-width">
+                 <div class="content-banner">
+                     <span class="date">
+                         14th october 2023
+                     </span>
+                     <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                     <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                     <div class="button">
+                         <a href="#">(Read more)</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+     <section class="news-bottom">
+         <div class="container">
+             <div class="row">
+                 <div class="col-md-3 col-sm-6">
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="col-md-3 col-sm-6">
+                     <div class="news-page">
+                         <div class="image">
+                             <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                         </div>
+                         <div class="content pt-4">
+                             <span class="date">14th october 2023</span>
+                             <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                             <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                             <div class="button">
+                                 <a href="#">(Read more)</a>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </section>
+ <?php get_footer(); ?> -->
+        <section class="category-section">
+            <div class="category d-flex justify-content-end flex-wrap">
+                <div class="category-item">
+                    <div class="category-banner">
+                        <div class="blend-page">
+                            <h2 class="headding">News</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item big-box">
+                    <div class="">
+                        <div class="full-width">
+                            <div class="half-width">
+                                <div class="image-banner">
+                                    <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="half-width">
+                                <div class="category-contain">
+                                    <span class="date">14th october 2023</span>
+                                    <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                                    <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                    <div class="button">
+                                        <a href="#">(Read more)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <h3 class="headding">News</h3>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item big-box primary-bg">
+                    <div class="">
+                        <div class="full-width">
+                            <div class="half-width">
+                                <div class="image-banner">
+                                    <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="half-width">
+                                <div class="category-contain">
+                                    <span class="date">14th october 2023</span>
+                                    <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                                    <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                    <div class="button">
+                                        <a href="#">(Read more)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg d-sm-block d-none"></div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item small-box primary-bg">
+                    <div class="category-box">
+                        <div class="image">
+                            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                        </div>
+                        <div class="category-contain pt-4">
+                            <span class="date">14th october 2023</span>
+                            <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                            <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                            <div class="button">
+                                <a href="#">(Read more)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row category">
+                <div class="col-12 category-item">
+                    <div class="blend-page">
+                        <h2 class="headding">News</h2>
+                    </div>
+                </div>
+                <div class="col-12 category-item hero-section">
+                    <div class="w-100">
+                        <div class="full-width">
+                            <div class="half-width">
+                                <div class="image-banner">
+                                    <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="half-width">
+                                <div class="category-contain">
+                                    <span class="date">14th october 2023</span>
+                                    <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                                    <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                    <div class="button">
+                                        <a href="#">(Read more)</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 primary-bg py-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="category-item">
+                                    <h4 class="headding">News</h4>
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 category-item">
+                                        <div class="w-100">
+                                            <div class="full-width">
+                                                <div class="half-width">
+                                                    <div class="image-banner">
+                                                        <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="half-width">
+                                                    <div class="category-contain">
+                                                        <span class="date">14th october 2023</span>
+                                                        <h3 class="headding">Title of the news lorem ipsum dolor sit amet lorem ipsum</h3>
+                                                        <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                        <div class="button">
+                                                            <a href="#">(Read more)</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 primary-bg pb-5">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="category-item">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 category-item small">
+                                        <div class="category-box">
+                                            <div class="image">
+                                                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/11/Screenshot-2023-11-16-alle-13.45.51@2x-1.png" alt="">
+                                            </div>
+                                            <div class="category-contain pt-4">
+                                                <span class="date">14th october 2023</span>
+                                                <h3 class="headding">Title of the news lorem ipsum title of the news lorem ipsum</h3>
+                                                <p>Preview max 5 lines. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis, magna vel varius fringilla, lorem ipsum dolor sit amet, nisi nunc euismod libero, consecte…</p>
+                                                <div class="button">
+                                                    <a href="#">(Read more)</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            color: #000;
+        }
+.error-bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.error-bg-video video{
+    width: 100%;
+}
+.error-banner{
+    height: 100vh;
+    position: relative;
+}
+.blend-page {
+    background-color: #FAFAFA;
+    color: black;
+    mix-blend-mode: screen;
+    height: 40vh !important;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="social-link">
+        <div class="scoial-icon">
+            <img src="https://elumina.cloud392.com/wp-content/uploads/2023/12/link.svg" alt="share">
+        </div>
+        <div class="scoial-icon">
+            <a onClick="window.open('https://www.linkedin.com/shareArticle?url=<?php echo urlencode($url); ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" rel="noopener noreferrer" href="javascript: void(0)">
+                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/12/linkedin.svg" alt="linkedin">
+            </a>
+        </div>
+        <div class="social-icon">
+            <a onClick="window.open('http://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)">
+                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/12/facebook.svg" alt="facebook">
+            </a>
+        </div>	
+        <div class="scoial-icon">
+            <a onClick="window.open('https://twitter.com/intent/tweet?text=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)">
+                <img src="https://elumina.cloud392.com/wp-content/uploads/2023/12/x.svg" alt="twitter">
+            </a>
+        </div>
+    </div>
+
+    <section class="third-bg single-links">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="">
+                        <span class="date"><?php the_time('jS F Y'); ?></span>
+                        <h1 class="headding"><?php the_title(); ?></h1>
+                        <div class="social-share">
+                            <?php
+                        	global $post;
+                        	$id = $post->ID;
+                        	$url = get_permalink($id);
+                            ?>
+                           <div>
+                               <p>
+                                   Share this article
+                               </p>
+                            </div>
+                            <div class="social-link">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30.234" height="30" viewBox="0 0 30.234 30">
+                                    <g id="noun-link-5747677" transform="translate(-2.326 -2.431)">
+                                      <g id="Group_123" data-name="Group 123" transform="translate(2.326 2.431)">
+                                        <path id="Path_22" data-name="Path 22" d="M27.37,15.719,24.28,18.81a1.36,1.36,0,1,1-1.923-1.924l3.09-3.091a5.133,5.133,0,0,0,.2-7.056A4.876,4.876,0,0,0,22.1,5.153l-.155,0a5.723,5.723,0,0,0-4.03,1.662L15.1,9.63a1.36,1.36,0,0,1-1.924-1.924l2.817-2.817a8.493,8.493,0,0,1,6.18-2.455,7.577,7.577,0,0,1,5.5,2.485,7.86,7.86,0,0,1-.3,10.8Z" transform="translate(0.56 -2.431)" fill="#000"/>
+                                        <path id="Path_23" data-name="Path 23" d="M18.807,24.282l-2.835,2.836a8.4,8.4,0,0,1-6.164,2.447,7.548,7.548,0,0,1-5.485-2.487,7.85,7.85,0,0,1-2-5.252,7.705,7.705,0,0,1,2.29-5.556l3.09-3.09A1.36,1.36,0,0,1,9.629,15.1l-3.09,3.09a5.027,5.027,0,0,0-1.493,3.619,5.155,5.155,0,0,0,1.3,3.45,4.857,4.857,0,0,0,3.534,1.583,5.8,5.8,0,0,0,4.167-1.653l2.835-2.835a1.36,1.36,0,1,1,1.922,1.924Z" transform="translate(-2.326 0.432)" fill="#000"/>
+                                        <path id="Path_24" data-name="Path 24" d="M9.922,20.15,20.148,9.924a1.36,1.36,0,0,1,1.922,1.924L11.845,22.074a1.392,1.392,0,0,1-1.923,0,1.362,1.362,0,0,1,0-1.924Z" transform="translate(-0.884 -1.001)" fill="#000"/>
+                                      </g>
+                                    </g>
+                                </svg>
+                                <a onClick="window.open('https://www.linkedin.com/shareArticle?url=<?php echo urlencode($url); ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" rel="noopener noreferrer" href="javascript: void(0)">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <a onClick="window.open('http://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a onClick="window.open('https://twitter.com/intent/tweet?text=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="33.188" height="30" viewBox="0 0 33.188 30">
+                                        <path id="Path_21" data-name="Path 21" d="M164.358,148.35h5.089l-11.118,12.708,13.079,17.292H161.167l-8.021-10.487-9.179,10.487h-5.092l11.891-13.592L138.22,148.35h10.5l7.25,9.586ZM162.572,175.3h2.821l-18.2-24.067h-3.026Z" transform="translate(-138.22 -148.35)"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="error-banner">
+        <div class="error-bg-video">
+            <video autoplay loop>
+                <source src="https://elumina.cloud392.com/wp-content/uploads/2023/11/blend.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="container">
+            <div class="blend-page">
+                <h2 class="headding">404</h2>
+                <h5>Page not found!</h5>
+				<p>
+					We’re sorry we can’t seem to find the page you’re looking for, but here are some useful links to help you back on your way.
+				</p>
+                <div class="error-link">
+                    <a href="#">About Us</a>
+                    <a href="#">Product & Service</a>
+                    <a href="#">News</a>
+                    <a href="#">blog</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

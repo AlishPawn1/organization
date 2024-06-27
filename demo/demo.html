@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counter Animation Example</title>
+  <!-- Include jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    /* Add any additional styling if needed */
+    section{
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Your HTML structure -->
+<section></section>
+<section></section>
+
+<div class="online-search-option">
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <div class="online-search-box">
+        <div>
+          <i class="fa-regular fa-user"></i>
+          <span class="course-search-number" data-speed="2000" data-stop="188" data-to-value="188">0</span>
+        </div>
+        <span class="course-search-text">Over 188 students</span>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <div class="online-search-box">
+        <div>
+          <i class="fa-solid fa-book-open"></i>
+          <span class="course-search-number"  data-speed="2000" data-stop="48" data-to-value="48">0</span>
+        </div>
+        <span class="course-search-text">Total Courses</span>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-12">
+      <div class="online-search-box">
+        <div>
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span class="course-search-number"  data-speed="2000" data-stop="29" data-to-value="29">0</span>
+        </div>
+        <span class="course-search-text">Total Experienced Teachers</span>
+      </div>
+    </div>
+  </div>
+</div>
+<section></section>
+
+<!-- Include your JavaScript code -->
+<script>
+  $(document).ready(function(){
+    
+  });
+  if(document.querySelector('.online-search-option')){
+    var a = 0;
+    $(window).scroll(function() {
+      var oTop = $('.online-search-option').offset().top - window.innerHeight;
+
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.course-search-number').each(function() {
+          var $this = $(this);
+          jQuery({ Counter: 0 }).animate({ Counter: $this.attr('data-to-value') }, {
+            duration: 2000,
+            easing: 'swing',
+            step: function () {
+              $this.text(Math.ceil(this.Counter));
+            }
+          });
+        });
+        a = 1;
+      }
+    });
+  };
+</script>
+
+</body>
+</html>
+
+
+<!-- <div class="online-search-option">
+  <div class="row">
+      <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="online-search-box">
+              <div class="">
+                  <i class="fa-regular fa-user"></i>
+                  <span class="course-search-number" data-speed="2000" data-stop="<?php the_field('number_of_students'); ?>" data-to-value="<?php the_field('number_of_students'); ?>"><?php the_field('number_of_students'); ?></span>
+              </div>
+              <span class="course-search-text">Over <?php the_field('number_of_students'); ?>  student</span>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-6">
+          <div class="online-search-box">
+              <div class="">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="course-search-number" data-speed="2000" data-stop="<?php the_field('number_of_course'); ?>" data-to-value="<?php the_field('number_of_course'); ?>"><?php the_field('number_of_course'); ?></span>
+              </div>
+              <span class="course-search-text">Total Courses.</span>
+          </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-12">
+          <div class="online-search-box">
+              <div class="">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span class="course-search-number" data-speed="2000" data-stop="<?php the_field('number_of_teacher'); ?>" data-to-value="<?php the_field('number_of_teacher'); ?>"><?php the_field('number_of_teacher'); ?></span>
+              </div>
+              <span class="course-search-text">Total Experienced Teachers</span>
+          </div>
+      </div>
+  </div>
+</div> -->

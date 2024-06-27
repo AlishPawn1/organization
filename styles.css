@@ -1,0 +1,426 @@
+/*Theme Name: : FnClickAuthor URI: http://fnclick.com/Version: 1.0.0*/
+
+:root {
+    --primary-color: #0065b3;
+    --secondary-color: #d31b20;
+    --dark-color: #000;
+    --light-gray: rgb(249 249 249 / 73%);
+    --light-white: #f5f5f5;
+    --gray-l-color: #666666;
+
+    --primary-fonts: 'Roboto', sans-serif;
+    --secondary-fonts: 'Archivo', sans-seri;
+    --logo-fonts: 'Merriweather', serif;
+
+    --default-transition: all 0.3s ease;
+
+    --section-gaps: 100px;
+    --section-md-gaps: 70px;
+}
+
+
+body {
+    font-family: var(--primary-fonts);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: var(--dark-color);
+}
+
+img {
+    max-width: 100%;
+}
+body, html{
+    overflow-x:hidden;
+}
+
+.h1, .h2, .h3, .h4, .h5,
+.h6, h1, h2, h3, h4, h5, h6 {
+    font-family: var(--secondary-fonts);
+    overflow-wrap: inherit;
+    line-height: 1.1;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    color:var(--primary-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a, input[type="submit"], button {
+    cursor: pointer;
+    -webkit-transition: var(--default-transition);
+    -o-transition: var(--default-transition);
+    transition: var(--default-transition);
+}
+
+.mb-5 {
+    margin-bottom: 3.4rem !important;
+}
+
+.social-links ul,
+.sub-menu,
+ul.contact-list,
+.social-link-list,
+.single-test-sty ul,
+.site-footer ul,
+.copyright-sec ul,
+.primary-menu,
+.list-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.p-10 {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.p-10 > * {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Slick arrow */
+
+.slick-arrow {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--dark-color);
+    opacity: 50%;
+    z-index: 5;
+    -webkit-transition: var(--default-transition);
+    -o-transition: var(--default-transition);
+    transition: var(--default-transition);
+}
+
+.slick-prev.slick-arrow {
+    left: 0px;
+}
+
+.slick-next.slick-arrow {
+    right: -0px;
+}
+
+.slick-arrow:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.slick-dots li {
+    display: inline-block;
+}
+
+.slick-dots li {
+    display: inline-block;
+    padding: 0 5px;
+}
+
+.slick-dots li button {
+    display: inline-block;
+    font-size: 0;
+    background: none;
+    border: 1px solid #e5e5e5;
+    background: #e5e5e5;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 200ms ease-in-out all;
+    -o-transition: 200ms ease-in-out all;
+    transition: 200ms ease-in-out all;
+    cursor: pointer;
+}
+
+.slick-dots li button:hover,
+.slick-dots li.slick-active button {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+}
+
+.slick-dots li button:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
+.slick-dots li button:focus,
+.slick-dots li button:hover {
+    outline: none;
+}
+
+/* End Slick arrow */
+
+/* Color ,gaps and other css */
+
+.primary-fonts {
+    font-family: var(--primary-fonts);
+}
+
+.secondary-fonts {
+    font-family: var(--secondary-fonts);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.secondary-color {
+    color: var(--secondary-color);
+}
+
+.dark-color {
+    color: var(--dark-color);
+}
+
+.light-gray-color {
+    color: var(--light-gray);
+}
+
+.gray-l-color {
+    color: var(--gray-l-color);
+}
+
+.primary-bg {
+    background-color: var(--primary-color);
+}
+
+.secondary-bg {
+    background-color: var(--secondary-color);
+}
+
+.dark-bg {
+    background-color: var(--dark-color);
+}
+
+.light-white-bg {
+    background-color: var(--light-white);
+}
+
+.light-gray-bg {
+    background-color: var(--light-gray);
+}
+
+.section-gaps {
+    padding: var(--section-gaps) 0;
+}
+
+.section-md-gaps {
+    padding: var(--section-md-gaps) 0;
+}
+.section-md-top-gaps{
+    padding-top: var(--section-md-gaps);
+}
+.section-md-bottom-gaps{
+    padding-bottom: var(--section-md-gaps);
+}
+
+.mt-4-5 {
+    margin-top: 2.5rem !important;
+}
+
+.mb-4-5 {
+    margin-bottom: 2.5rem !important;
+}
+
+.font-weight-med {
+    font-weight: 500 !important;
+}
+
+.font-weight-sembold {
+    font-weight: 600 !important;
+}
+
+/* End Color ,gaps and other css */
+
+/* Title sty css */
+
+.main-title .title {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-left: 3rem;
+    color: var(--primary-color);
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.main-title .subtitle {
+    font-size: 40px;
+    font-weight: bold;
+}
+.main-title .txt {
+    max-width: 600px;
+    font-size: 15px;
+}
+.main-title .title:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 2.5rem;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+.max-width-min{
+    max-width: 440px;
+}
+
+/* End Title sty css */
+
+/* Button sty css */
+
+.border-btn,
+.btn-box {
+    padding: 14px 35px;
+    font-size: 16px;
+    min-width: 170px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.border-btn.med,
+.btn-box.med {
+    padding: 8px 25px;
+    font-size: 15px;
+    min-width: 140px;
+    text-align: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.btn-box.primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.cta-btn a:hover,
+.btn-box.primary:hover {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.text-sty-btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    color: var(--secondary-color);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.text-sty-btn:after {
+    content: '\f105';
+    padding: 0 0 0 10px;
+    font-weight: bold;
+    font-family: "Font Awesome 5 Free";
+}
+
+.text-sty-btn:hover {
+    color: var(--primary-color);
+}
+
+.border-btn {
+    border-radius: 50px;
+}
+
+.border-btn.dark {
+    border: 2px solid var(--dark-color);
+    color: var(--dark-color);
+}
+
+.border-btn.dark:hover {
+    background: var(--dark-color);
+    color: #fff;
+}
+
+.product-lists-sty .item .content .btn-box {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.product-lists-sty .item .content .btn-box:after {
+    content: "\f105";
+    font-weight: bold;
+    font-family: "Font Awesome 5 Free";
+    padding-left: 10px;
+}
+.border-btn.ico-hover,
+.btn-box.ico-hover{
+    position: relative;
+}
+.border-btn.ico-hover:before,
+.btn-box.ico-hover:before {
+    content: "\f105";
+    font-weight: bold;
+    font-family: "Font Awesome 5 Free";
+    padding-left: 10px;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    color:#fff;
+    opacity: 0;
+    -webkit-transition: var(--default-transition);
+    -o-transition: var(--default-transition);
+    transition: var(--default-transition);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.border-btn.ico-hover:hover:before,
+.btn-box.ico-hover:hover:before{
+    right: 19px;
+    opacity: 1;
+}
+
+/* End Button sty css */
+
+
+

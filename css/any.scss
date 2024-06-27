@@ -1,0 +1,57 @@
+$primary-color: #000;
+
+@mixin icon($rotate:45deg , $height:40px, $bg-color:#303233){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $height;
+    width: $height;
+    border-radius: 50%;
+    background-color: $bg-color;
+    border: 1px solid #ddd;
+    color: #ddd;
+    transform: rotate($rotate);
+}
+@mixin full-btn($bg-color:#373737 , $color:#ffffff99, $hover-color:#fff , $hover-bg:rgb(70, 87, 70) , $hover-border:$third-color){
+    background-color: $bg-color;
+    border: 1px solid;
+    border-radius: 5px;
+    color: $color;
+    text-transform: uppercase;
+    &:hover{
+        color: $hover-color;
+        border-color: $hover-border;
+        background-color: $hover-bg;        
+    }
+}
+@mixin paragraph($font-weight:500, $font-size:18px , $line-height: 28px, $color: rgba(255, 255, 255, 0.60)){
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+@mixin head-title($font-weight:500, $font-size:42px , $line-height: 60px, $color: #fff){
+    color: $color;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+@mixin small-link($font-size:14px, $font-weight:500, $color: rgba(255, 255, 255, 0.60), $blur:15px, $bg-color: rgba(55, 62, 70, 0.5), $hover-border: rgb(60, 168, 60), $hover-bg-color:rgb(70, 87, 70)){
+    text-align: center;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    text-transform: uppercase;
+    padding: 0 10px;
+    border: 1px solid $color;
+    border-radius: 5px;
+    background: $bg-color;
+    -webkit-backdrop-filter: blur($blur);
+    backdrop-filter: blur($blur);
+    color: $color;
+    &:hover{
+        color: $color;
+        border-color: $hover-border;
+        background-color: $hover-bg-color;
+    }
+}
